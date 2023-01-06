@@ -10,8 +10,15 @@ const typeDefs = `#graphql
     author: String
   }
 
+  type MainCard {
+    title: String
+    image: String
+
+  }
+
   type Query {
     books: [Book]
+    mainCard: [MainCard]
   }
 `;
 
@@ -28,12 +35,28 @@ const books = [
   },
 ];
 
+const mainCards = [
+  {
+    title: "Recently Viewed",
+    image: "lion image",
+  },
+  {
+    title: "Looking for a gift",
+    image: "penguin image",
+  },
+  {
+    title: "Best behaved",
+    image: "cat image",
+  },
+];
+
 /* Step 5: Define a resolver
 ----------------------------- */
 
 const resolvers = {
   Query: {
     books: () => books,
+    mainCard: () => mainCards,
   },
 };
 
