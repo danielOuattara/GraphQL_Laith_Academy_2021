@@ -11,6 +11,7 @@ const typeDefs = `#graphql
     title: String
     image: String
   }
+
   type Animal{
     image: String!
     title: String!
@@ -22,7 +23,7 @@ const typeDefs = `#graphql
   }
 
   type Query {
-    mainCard: [MainCard]
+    mainCards: [MainCard]
     animals:[Animal]
   }
 `;
@@ -32,7 +33,7 @@ const typeDefs = `#graphql
 
 const resolvers = {
   Query: {
-    mainCard: () => mainCards,
+    mainCards: () => mainCards,
     animals: () => animals,
   },
 };

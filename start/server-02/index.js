@@ -13,12 +13,11 @@ const typeDefs = `#graphql
   type MainCard {
     title: String
     image: String
-
   }
 
   type Query {
     books: [Book]
-    mainCard: [MainCard]
+    mainCards: [MainCard]
   }
 `;
 
@@ -56,7 +55,7 @@ const mainCards = [
 const resolvers = {
   Query: {
     books: () => books,
-    mainCard: () => mainCards,
+    mainCards: () => mainCards,
   },
 };
 

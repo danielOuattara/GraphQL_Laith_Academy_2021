@@ -11,6 +11,7 @@ const typeDefs = `#graphql
     title: String
     image: String
   }
+  
   type Animal{
     id: ID!
     slug: String!

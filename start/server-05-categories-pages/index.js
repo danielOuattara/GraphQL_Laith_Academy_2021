@@ -46,12 +46,12 @@ const resolvers = {
   Query: {
     mainCards: () => mainCards,
     animals: () => animals,
-    animal: (parents, args, ctx) => {
+    animal: (parent, args, ctx) => {
       console.log(args);
       return animals.find((animal) => animal.slug === args.slug);
     },
     categories: () => categories,
-    category: (parents, args, ctx) => {
+    category: (parent, args, ctx) => {
       console.log(args);
       return categories.find((category) => category.slug === args.slug);
     },
