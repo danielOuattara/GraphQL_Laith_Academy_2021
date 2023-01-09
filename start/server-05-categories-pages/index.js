@@ -26,7 +26,7 @@ const typeDefs = `#graphql
   type Category {
     id: ID!
     image: String!
-    category: String!
+    name: String!
     slug: String!
   }
 

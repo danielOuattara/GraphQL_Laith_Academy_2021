@@ -1,0 +1,8 @@
+query QueryExample {
+  categories {
+    id
+    name
+    image
+    slug
+  }
+}
