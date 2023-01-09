@@ -12,8 +12,10 @@ const typeDefs = `#graphql
 
   # This "Book" type defines the queryable fields for every book in our data source.
   type Book {
+    id: ID!
     title: String
     author: String
+    page: Int
   }
 
   # The "Query" type is special: it lists all of the available queries that
@@ -21,6 +23,7 @@ const typeDefs = `#graphql
   # case, the "books" query returns an array of zero or more Books (defined above).
   type Query {
     books: [Book]
+    book(id: ID!): Book
   }
 `;
 
@@ -28,12 +31,16 @@ const typeDefs = `#graphql
 ------------------------------- */
 const books = [
   {
+    id: "1",
     title: "The Awakening",
     author: "Kate Chopin",
+    page: 200,
   },
   {
+    id: "2",
     title: "City of Glass",
     author: "Paul Auster",
+    page: 354,
   },
 ];
 
@@ -45,6 +52,11 @@ const books = [
 const resolvers = {
   Query: {
     books: () => books,
+    book: (parent, args, ctx) => {
+      console.log(args);
+      console.log("books = ", books);
+      return books.find((book) => book.id === args.id);
+    },
   },
 };
 
