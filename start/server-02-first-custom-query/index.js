@@ -5,9 +5,12 @@ import { startStandaloneServer } from "@apollo/server/standalone";
 -------------------------------------- */
 
 const typeDefs = `#graphql
+
   type Book {
+    id: ID!
     title: String
     author: String
+    page: Int
   }
 
   type MainCard {
@@ -17,6 +20,7 @@ const typeDefs = `#graphql
 
   type Query {
     books: [Book]
+    book(id: ID!): Book
     mainCards: [MainCard]
   }
 `;
@@ -25,12 +29,16 @@ const typeDefs = `#graphql
 ------------------------------- */
 const books = [
   {
+    id: "1",
     title: "The Awakening",
     author: "Kate Chopin",
+    page: 200,
   },
   {
+    id: "2",
     title: "City of Glass",
     author: "Paul Auster",
+    page: 354,
   },
 ];
 
@@ -55,6 +63,11 @@ const mainCards = [
 const resolvers = {
   Query: {
     books: () => books,
+    book: (parent, args, ctx) => {
+      console.log(args);
+      console.log("books = ", books);
+      return books.find((book) => book.id === args.id);
+    },
     mainCards: () => mainCards,
   },
 };

@@ -1,0 +1,43 @@
+query QueryBooks {
+  books {
+    id
+    author
+    title
+    page
+  }
+}
+query QueryBooks {
+  books {
+    title
+    author
+  }
+}
+
+query QueryOneBook {
+  book(id: "2") {
+    id
+    author
+    title
+    page
+  }
+}
+
+query QueryExample {
+  books {
+    id
+    author
+    title
+    page
+  }
+
+  book(id: "2") {
+    id
+    author
+    title
+    page
+  }
+  mainCards {
+    image
+    title
+  }
+}
