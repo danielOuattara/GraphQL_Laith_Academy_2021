@@ -22,7 +22,7 @@ const animals = [
     title: "title",
     rating: 4.5,
     price: "12,400",
-    description: ["azerty"],
+    description: ["azerty", "qwerty"],
     stock: 34,
     onSale: true,
   },

@@ -1,0 +1,12 @@
+query QueryExample {
+  mainCards {
+    image
+    title
+  }
+
+  animals {
+    image
+    title
+    description
+  }
+}
