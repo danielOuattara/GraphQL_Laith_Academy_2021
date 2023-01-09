@@ -1,0 +1,21 @@
+query QueryExample {
+  mainCards {
+    image
+    title
+  }
+
+  animals {
+    image
+    title
+    description
+    onSale
+    price
+    rating
+    stock
+  }
+
+  animal(slug: "lion") {
+    image
+    slug
+  }
+}
