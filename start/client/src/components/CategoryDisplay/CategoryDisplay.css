@@ -1,6 +1,7 @@
 .CategoryDisplay {
-    padding-top: 2rem 
+    padding-top: 2rem
 }
+
 .CategoryDisplay-card {
     border-radius: 100%;
     overflow: hidden;
@@ -20,8 +21,8 @@
 }
 
 .CategoryDisplay-card-container h3 {
-   text-align: center;
-   margin-top: -2rem;
+    text-align: center;
+    margin-top: -2rem;
 }
 
 .CategoryDisplay-container {

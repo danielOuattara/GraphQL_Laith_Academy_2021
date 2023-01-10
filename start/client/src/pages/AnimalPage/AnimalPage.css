@@ -4,31 +4,31 @@
 
 .text-container {
     width: 40%;
-  }
-  
-  .text-container h1 { 
+}
+
+.text-container h1 {
     font-size: 1.25rem;
     line-height: 2rem;
-  }
+}
 
-  .star-container img {
-      width: 1rem
-  }
+.star-container img {
+    width: 1rem
+}
 
-  .star-container {
-      display: flex;
-  }
+.star-container {
+    display: flex;
+}
 
-  .star-container p {
-      color: rgb(33, 145, 193);
-      margin-top: 1rem;
-      margin-left: 0.5rem;
-  }
+.star-container p {
+    color: rgb(33, 145, 193);
+    margin-top: 1rem;
+    margin-left: 0.5rem;
+}
 
-  .about-container h4 {
-      font-size: 1.15rem;
-      font-weight: 700;
-  }
+.about-container h4 {
+    font-size: 1.15rem;
+    font-weight: 700;
+}
 
 
 
