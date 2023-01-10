@@ -1,0 +1,81 @@
+query QueryExample {
+  categories {
+    category
+    id
+    image
+    slug
+    animals {
+      slug
+    }
+  }
+}
+
+query QueryExample {
+  category(slug: "cats") {
+    slug
+    category
+    image
+    animals {
+      slug
+      image
+      title
+    }
+  }
+}
+
+query QueryExample {
+  category(slug: "cats") {
+    category
+    animals {
+      slug
+      image
+      title
+    }
+  }
+}
+
+query QueryExample {
+  category(slug: "mammals") {
+    category
+    animals {
+      slug
+      image
+      title
+    }
+  }
+}
+
+query QueryExample {
+  categories {
+    category
+    animals {
+      image
+      title
+    }
+  }
+}
+
+query QueryExample {
+  animal(slug: "lion") {
+    category {
+      image
+      id
+      slug
+    }
+  }
+}
+
+query QueryExample {
+  animals {
+    id
+    image
+    category {
+      category
+      animals {
+        slug
+        image
+        id
+      }
+    }
+  }
+}
