@@ -1,0 +1,141 @@
+query QueryExample {
+  categories {
+    category
+    id
+    image
+    slug
+    animals {
+      slug
+    }
+  }
+}
+
+query QueryExample {
+  category(slug: "cats") {
+    slug
+    category
+    image
+    animals {
+      slug
+      image
+      title
+    }
+  }
+}
+
+query QueryExample {
+  category(slug: "cats") {
+    category
+    animals {
+      slug
+      image
+      title
+    }
+  }
+}
+
+query QueryExample {
+  category(slug: "mammals") {
+    category
+    animals {
+      slug
+      image
+      title
+    }
+  }
+}
+
+query QueryExample {
+  categories {
+    category
+    animals {
+      image
+      title
+    }
+  }
+}
+
+query QueryExample {
+  animal(slug: "lion") {
+    category {
+      image
+      id
+      slug
+    }
+  }
+}
+
+query QueryExample {
+  animals {
+    id
+    image
+    category {
+      category
+      animals {
+        slug
+        image
+        id
+      }
+    }
+  }
+}
+
+mutation {
+  addAnimal(
+    slug: "python"
+    image: "new image for python"
+    title: "python"
+    rating: 4
+    price: "2,310"
+    description: ["azerty", "qwerty"]
+    stock: 3
+    onSale: true
+    category: "2"
+  ) {
+    id
+    image
+    slug
+  }
+}
+
+mutation {
+  addAnimal(
+    slug: "python"
+    image: "new image for python"
+    title: "python"
+    rating: 4
+    price: "2,310"
+    description: ["azerty", "qwerty"]
+    stock: 3
+    onSale: true
+    category: "2"
+  ) {
+    id
+    image
+    slug
+  }
+}
+
+mutation {
+  removeAnimal(id: "8")
+}
+
+query QueryExample {
+  animals {
+    id
+    image
+  }
+}
+
+mutation {
+  updateAnimal(
+    id: "7"
+    image: "new image for elephant"
+    rating: 4
+    price: "2,310"
+    description: ["new elephant azerty", "new elephantqwerty"]
+    stock: 3
+  ) {
+    image
+  }
+}
