@@ -47,12 +47,10 @@ const resolvers = {
     mainCards: () => mainCards,
     animals: () => animals,
     animal: (parent, args, ctx) => {
-      console.log(args);
       return animals.find((animal) => animal.slug === args.slug);
     },
     categories: () => categories,
     category: (parent, args, ctx) => {
-      console.log(args);
       return categories.find((category) => category.slug === args.slug);
     },
   },

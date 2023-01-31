@@ -52,12 +52,10 @@ const resolvers = {
     mainCards: () => mainCards,
     animals: () => animals,
     animal: (parent, args, ctx) => {
-      console.log("args1 = ", args);
       return animals.find((animal) => animal.slug === args.slug);
     },
     categories: () => categories,
     category: (parent, args, ctx) => {
-      console.log("args2 = ", args);
       return categories.find((category) => category.slug === args.slug);
     },
     categoryById: (parent, args, ctx) => {
@@ -67,14 +65,12 @@ const resolvers = {
 
   Category: {
     animals: (parent, args, ctx) => {
-      console.log("in Category Query");
       return animals.filter((animal) => animal.category === parent.id);
     },
   },
 
   Animal: {
     category: (parent, args, ctx) => {
-      console.log("in Animal Query");
       return categories.find((category) => category.id === parent.category);
     },
   },
